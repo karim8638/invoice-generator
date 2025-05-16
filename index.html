@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <h1>Invoice Generator</h1>
+  
+  <div class="invoice-container">
+
+    <!-- ✅ Company Info (Top Header) -->
+    <div class="company-info">
+      <p>
+        <strong>Company Name:</strong>
+        <input type="text" id="companyName" placeholder="ModernTech Solutions" />
+      </p>
+      <p>
+        <strong>Address:</strong>
+        <input type="text" id="companyAddress" placeholder="KM4, Wadada Maka Al-Mukarama, Muqdisho, Somalia" />
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <input type="email" id="companyEmail" placeholder="contact@moderntech.so" />
+        </p>
+        <p>
+        <strong>Phone:</strong>
+        <input type="tel" id="companyPhone" placeholder="+252 61 2345678" />
+      </p>
+    </div>
+
+    <h2>Customer Info</h2>
+
+    <div class="invoice-header">
+      <div>
+        <label>Client Name:</label>
+        <input type="text" id="clientName" placeholder="e.g. Karim Dahir" />
+      </div>
+      <div>
+        <label>Invoice #:</label>
+        <input type="text" id="invoiceNumber" placeholder="0001" />
+      </div>
+      <div>
+        <label>Date:</label>
+        <input type="date" id="invoiceDate" />
+      </div>
+    </div>
+
+    <table id="itemsTable">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Unit Price</th>
+          <th>Line Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="addItemBtn" class="action-btn">+ Add Item</button>
+
+    <div class="summary">
+      <div>Subtotal: <span id="subtotal">0.00</span></div>
+      <div>
+        Tax (%):
+        <input type="number" id="taxRate" value="0" min="0" step="0.1" />
+        = <span id="taxAmount">0.00</span>
+      </div>
+      <div class="total">Total: <span id="totalAmount">0.00</span></div>
+    </div>
+     <h4 align="center">Powered By karim</h4>
+    <div class="actions">
+      <button id="generateBtn" class="primary-btn">Generate</button>
+      <button id="printBtn" class="secondary-btn">Print</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
