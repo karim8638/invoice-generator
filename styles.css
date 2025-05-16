@@ -1,0 +1,173 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #212121;
+  padding: 2rem;
+  margin: 0;
+}
+
+.invoice-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1A237E;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.invoice-header > div {
+  margin-bottom: 1rem;
+}
+
+.invoice-header label {
+  display: inline-block;
+  width: 120px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+  padding: 6px 10px;
+  border: 1px solid #C5CAE9;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #E8EAF6;
+}
+
+th, td {
+  border: 1px solid #C5CAE9;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #C5CAE9;
+  font-weight: 600;
+}
+
+td input {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.action-btn,
+.primary-btn,
+.secondary-btn {
+  margin-top: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.action-btn {
+  background: #3949AB;
+  color: white;
+}
+
+.primary-btn {
+  background: #1A237E;
+  color: white;
+  margin-right: 1rem;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #1A237E;
+  border: 2px solid #1A237E;
+}
+
+.summary {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 16px;
+}
+
+.summary input {
+  width: 60px;
+  text-align: right;
+  margin-left: 8px;
+}
+
+.summary .total {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.removeBtn {
+  background: #D32F2F;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.company-info {
+  margin-bottom: 2rem;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #C5CAE9;
+  padding-bottom: 1rem;
+}
+
+.company-info input {
+  border: none;
+  border-bottom: 1px dotted #999;
+  padding: 4px 6px;
+  font-size: 14px;
+  width: auto;
+  max-width: 300px;
+  font-family: inherit;
+  color: #333;
+  background: transparent;
+}
+
+/* Hide buttons and inputs when printing */
+@media print {
+  .action-btn,
+  .primary-btn,
+  .secondary-btn,
+  .actions,
+  .removeBtn {
+    display: none !important;
+  }
+
+  input,
+  button,
+  select {
+    pointer-events: none;
+    border: none;
+    background: transparent;
+  }
+
+  .company-info input {
+    color: #000;
+    font-weight: 500;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    color: #212121;
+  }
+}
